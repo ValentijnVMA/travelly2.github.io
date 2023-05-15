@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <div class="navbar1">
+        <div class="logo">
+            <a href="index.html">Travelly</a>
+        </div>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">Locations</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">London</a></li>
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">Tokyo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="takeoffs.html">TakeOffs</a></li>
+                    <li><a href="maintenance.html">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="signup">
+
+            <div id="results"></div>
+
+            <a href="form.html">Regrister</a>
+            <script>
+                const resultsList = document.getElementById('results');
+                const params = new URLSearchParams(window.location.search);
+                const firstItem = params.get(params.keys().next().value);
+                if (firstItem !== null) {
+                    const welcomeText = document.createElement('span');
+                    welcomeText.textContent = 'Logged In: ';
+                    resultsList.appendChild(welcomeText);
+                    resultsList.append(firstItem);
+                }
+
+            </script>
+            >
+        </div>
+    </div>
+    </div>
+</header>
+
+<div class="body4">
+    <section>
+        <div class="headingmiddle">
+            <h1>Make your profile here and press submit </h1>
+            <br></br>
+        </div>
+
+        <div class="subscribeform">
+            <form action="index.html" method="GET">
+                <div>
+                    <fieldset>
+                        <br>
+                        <h1>
+                            <label for="name">name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </h1>
+                        <br>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <h1>
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" min="1" max="125" required>
+                        </h1>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <h1>
+                            <label for="birthday">BirthDay:</label>
+                            <input type="date" id="birthday" name="birthday" min="1900-01-01" required> <br></br>
+                        </h1>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <h1>
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </h1>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <br>
+                        <h1>
+                            <label for="email">e-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </h1>
+                        <br>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <br>
+                        <h1>
+                            <label for="password">password</label>
+                            <input type="password" id="password" name="password" required>
+
+                        </h1>
+                        <br>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <h1>
+
+                            <button type="submit" value="Submit">Submit</button>
+                            <button type="reset" value="Reset">Reset</button>
+                        </h1>
+
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+
+        <aside>
+            <div class="sidebar">
+                <!-- Content for the sidebar -->
+            </div>
+        </aside>
+
+    </section>
+</div>
+
+</html>

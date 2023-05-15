@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="navbar1">
+            <div class="logo">
+                <a href="index.html">Travelly</a>
+            </div>
+            <a id="results"></a>
+            <nav>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">Locations</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Paris</a></li>
+                                <li><a href="#">London</a></li>
+                                <li><a href="#">New York</a></li>
+                                <li><a href="#">Tokyo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="takeoffs.html">TakeOffs</a></li>
+                        <li><a href="maintenance.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <nav>
+                <div class="signup">
+                    <a href="form.html">Regrister</a>
+                    <script>
+                        const resultsList = document.getElementById('results');
+                        const params = new URLSearchParams(window.location.search);
+                        const firstItem = params.get(params.keys().next().value);
+                        if (firstItem !== null) {
+                            const welcomeText = document.createElement('span');
+                            welcomeText.textContent = 'Welcome ';
+                            resultsList.appendChild(welcomeText);
+                            resultsList.append(firstItem);
+                        }
+                    </script>
+                </div>
+        </div>
+        </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="body1">
+
+            <section>
+
+                <div class="headingmiddle">
+                    <h1>Travel With Us ! <h1>
+                            <h2>Planning your vacation? Find a wide range of deals on hotels, excursions, flights and
+                                more. Start exploring and enjoy exclusive offers and packages that cover all interests.
+                            </h2>
+                            <br><br>
+                            <a href="maintenance.html">Book Now</a>
+
+                </div>
+            </section>
+        </div>
+        </div>
+
+        <div class="body2">
+            <section>
+                <div class="headingmiddle2">
+                    <h1>Time To Explore </h1>
+                    <h2>Has your dream always been to visit new york. We can make your dream come true !</h2>
+                    <br></br>
+                </div>
+
+                <aside>
+                    <div class="sidebar">
+                        <!-- Content for the sidebar -->
+                    </div>
+                </aside>
+
+            </section>
+        </div>
+        <div class="navbar2">
+            <h1>The Perfect Travel Experience </h1>
+        </div>
+        <div class="navbar2">
+            <h2>We cover everything! From picking the perfect hotel, flight and travelling destination </h2>
+        </div>
+
+        <div class="body3">
+            <section>
+                <div class="flex-container">
+                    <article>
+                        <div class="places">
+                            <h2>Australia</h2>
+                            <img src="images/istockphoto-480314300-170667a.jpg"
+                                style="width: 300px; height: 250px; border-radius: 12px;">
+                            <br>
+                            <br>
+                            <a href="#">Book Now 15% OFF</a>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="places">
+                            <h2>New York</h2>
+                            <img src="images/new yrkk.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                            <br>
+                            <br>
+                            <a href="#">Book Now 20% OFF</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="places">
+                            <h2>Thailand</h2>
+                            <img src="images/thaianddddd.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                            <br>
+                            <br>
+                            <a href="#">Book Now 25% OFF</a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside>
+                    <div class="sidebar">
+                        <!-- Content for the sidebar -->
+                    </div>
+                </aside>
+
+            </section>
+        </div>
+
+
+
+        <div class="body4">
+            <section>
+                <div class="headingmiddle">
+                    <h1>Contact us </h1>
+                    <br></br>
+                </div>
+
+                <div class="subscribeform">
+                    <form action="index.html" method="GET">
+                        <div>
+                            <fieldset>
+                                <br>
+                                <h1>
+                                    <label for="name">name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </h1>
+                                <br>
+                            </fieldset>
+
+                            <fieldset>
+                                <br>
+                                <h1>
+                                    <label for="email">e-mail:</label>
+                                    <input type="email" id="email" name="email" required>
+
+                                </h1>
+                                <br>
+                            </fieldset>
+
+                            <fieldset>
+
+                                <br>
+
+                                <label for="message">Message</label>
+                                <textarea type="message" id="message" name="message"> </textarea>
+
+                                <br>
+                            </fieldset>
+
+
+                            <fieldset>
+                                <h1>
+
+                                    <button type="submit" value="Submit">Submit</button>
+                                    <button type="reset" value="Reset">Reset</button>
+                                </h1>
+
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+
+                <aside>
+                    <div class="sidebar">
+                        <!-- Content for the sidebar -->
+                    </div>
+                </aside>
+
+            </section>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer">
+            <a href="#">Copyright</a>
+            <a href="#">Terms And Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
